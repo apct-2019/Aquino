@@ -12,7 +12,7 @@ Os requisitos de funcionamento do firmware são:
 
 A demolução AM será feita pela transformada de Hilbert. A demodulação foi feita segunda a base teórica:
 
-![Image Demodulação] (http://bit.ly/2ZB7GAF)
+![Image Demodulação](https://github.com/apct-2019/Aquino/blob/master/Demod-formula.jpg)
 
 Para uma primeira implementação foi desenvolvido um código em scilab que modula e demodula um sinal em AM. Este código servirá de base para o futuro código implementado no microcontrolador.
 
@@ -38,9 +38,21 @@ figure(3)
 plot(n, BasebandSignal,"b")
 plot(n, Envelop, "r")
 ```
-Como resultado do código acima foram gerados os seguintes gráficos
+Como resultado do código acima foram gerados os seguintes gráficos.
 
-No scilab a função hilbert(u) retorna u + i * û , ou seja para calcular a envoltória basta calcular o módulo do retorno da função.
+![Image Frequencia de Portadora e Banda Base](https://github.com/apct-2019/Aquino/blob/master/BasebandAndCarrierSignal.png)
+
+Sinal da Portadora e da Banda Base
+
+![Image Sinal Modulado em AM](https://github.com/apct-2019/Aquino/blob/master/AMSignal.png)
+
+Sinal Modulado em AM
+
+![Image Sinal Demodulado e Sinal Original](https://github.com/apct-2019/Aquino/blob/master/OriginalxDemodulatedSignal.png)
+
+Sinal Demodulado e Sinal Original
+
+Para o scilab a função hilbert(u) retorna u + i * û , ou seja para calcular a envoltória basta calcular o módulo do retorno da função.
 
 ## Conversor Analógico Digital
 
