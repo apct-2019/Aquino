@@ -70,7 +70,7 @@ com isso RD é igual a 4095 ou 72,2 dB.
 
 ### Taxa de Amostragem do Conversor AD
 
-A taxa de Amostragem do Conversor AD é calculada em função do Período de Amostragem e este é programavel. O Período de Amostragem é 12 ciclos de ADDClk mais x ciclos, onde x pode ser 3 15 28 56 84 112 144 480. A frequencia do ADCClk é programavel como f/2, f/4, f/6, f/8 onde f é a frequencia do clock APB2. Escolhendo APB2 como 84 MHz, ADCClck como f/6, e x como 3 chegamos a Taxa de amostragem de 933 KHz.
+A taxa de Amostragem do Conversor AD é calculada em função do Período de Amostragem e este é programavel. O Período de Amostragem é 12 ciclos de ADCClk mais x ciclos, onde x pode ser 3 15 28 56 84 112 144 480. A frequencia do ADCClk é programavel como f/2, f/4, f/6, f/8 onde f é a frequencia do clock APB2. Escolhendo APB2 como 84 MHz, ADCClk como f/6, e x como 3 chegamos a Taxa de Amostragem de 933 KHz.
 
 ### Frequencia Intermediária
 
