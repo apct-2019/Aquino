@@ -63,7 +63,7 @@ Para realização do circuito, primeiramente, é necessária que alguns parâmet
 * Ranger Dinâmico
 * Taxa de Amostragem do Conversor AD
 * Frequencia Intermediária
-
+* Circuito de Deslocamento de Nivel de Tensão
 
 ### Amplitude Máxima de Sinal
 Segundo o datasheet do microcontrolador, a amplitude máxima permetida para a conversão é de 3,6 Volts, porém será aplicada um percentual de 70% da voltagem máxima como margem de segurança para garantir o bom funcionamento da conversão, com isso a Amplitude máxima de sinal será de 2,5 Volts.
@@ -75,7 +75,9 @@ A resolução do conversor é programavel assumindo os valores de 6-bit, 8-bit, 
 ### Ranger Dinâmico 
 
 O ranger dinâmico mede quão sensível a conversão é para pequenas variações. O ranger é calculado utilizando a seguinte fórmula:
+
 RD = Maxima Voltagem/ Minima Voltagem
+
 Minima Voltagem = Maxima Voltagem/ # Niveis de Quantização
 
 com isso RD é igual a 4095 ou 72,2 dB.
@@ -87,3 +89,9 @@ A taxa de Amostragem do Conversor AD é calculada em função do Período de Amo
 ### Frequencia Intermediária
 
 Segundo o teorema de Nyquist temos que a Frequencia Intermediária tem que ser no máximo a metade da Taxa de Amostragem, com isso foi escolhido o valor de FI = 455 KHz que garante uma margem de segurança em relação a Taxa de Amostragem.
+
+### Circuito de Deslocamento de Nivel de Tensão
+
+Para melhor desempenho da modulação AM por transformada de Hilbert é necessário que o sinal seja positivo, caso contrário a parte negativa do sinal ficará espelhada para a positiva. Para evitar este problema deslocaremos todo o sinal para uma tensão superior com o objetivo de que toda a excursão do sinal seja na parte positiva. O esquemático abaixo representa o circuito que deslocará o sinal:
+
+![Image ShiftCircuit](https://github.com/apct-2019/Aquino/blob/master/ShiftCircuit.JPG)
