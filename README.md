@@ -92,6 +92,7 @@ Segundo o teorema de Nyquist temos que a Frequencia Intermediária tem que ser n
 
 ### Circuito de Deslocamento de Nivel de Tensão
 
-Para melhor desempenho da modulação AM por transformada de Hilbert é necessário que o sinal seja positivo, caso contrário a parte negativa do sinal ficará espelhada para a positiva. Para evitar este problema deslocaremos todo o sinal para uma tensão superior com o objetivo de que toda a excursão do sinal seja na parte positiva. O esquemático abaixo representa o circuito que deslocará o sinal:
+Para melhor desempenho da modulação AM por transformada de Hilbert é necessário que o sinal seja positivo, caso contrário a parte negativa do sinal ficará espelhada para a positiva. Para evitar este problema deslocaremos todo o sinal para uma tensão superior com o objetivo de que toda a excursão do sinal seja na parte positiva. Os componentes utilizados serão o amplificador operacional 
+OPA4322SAIPWR e 3 Resistores de 1K. O esquemático abaixo representa o circuito que deslocará o sinal:
 
 ![Image ShiftCircuit](https://github.com/apct-2019/Aquino/blob/master/ShiftCircuit.JPG)
